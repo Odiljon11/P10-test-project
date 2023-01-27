@@ -2,7 +2,7 @@ def add(a, b):
     def addd():
         return (a + b) * 2
 
-    return addd()
+    return addd
 
 
 a = int(input("Enter the number of a ->"))
