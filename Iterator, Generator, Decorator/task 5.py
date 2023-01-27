@@ -20,4 +20,3 @@ def sum_index(lst):
 print(sum_index([2, 4, 5, 6]))
 print(sum_index((2, 4, 5, 6)))
 
-#toliq emas
