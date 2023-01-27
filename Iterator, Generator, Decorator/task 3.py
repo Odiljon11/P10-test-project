@@ -1,8 +1,8 @@
 def add(a, b):
-    def addd():
+    def inner_add():
         return (a + b) * 2
 
-    return addd
+    return inner_add
 
 
 a = int(input("Enter the number of a ->"))
