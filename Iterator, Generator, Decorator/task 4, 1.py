@@ -1,21 +1,21 @@
-def only_even_parameters(func):
-    def inner(*args):
-
-        for i in args:
-            if i % 2 == 0:
-                return func(*args)
+def only_even_parameters(dec_func):
+    def little_func(a, b):
+        for i in range(1, 3):
+            if a % 2 == 0:
+                if b % 2 == 0:
+                    return dec_func(a, b)
+                else:
+                    return "Please add only even numbers!"
             else:
-                return "Iltimos, faqat juft raqamlarni qo'shing!"
+                return "Please add only even numbers!"
 
-    return inner
+    return little_func
 
 
 @only_even_parameters
-def multiply(a, b):
+def add(a, b):
     return a + b
 
 
-a = int(input("Enter the number of a ->"))
-b = int(input("Enter the number of b ->"))
-
-print(multiply(a, b))
+print(add(2, 8))
+print(add(1, 4))

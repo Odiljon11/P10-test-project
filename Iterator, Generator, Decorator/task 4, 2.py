@@ -1,23 +1,22 @@
-def even_parametrs(func):
-    def inner(*args):
-
+def only_even_parametrs(dec_func):
+    def little_func(*args):
+        q = 0
         for i in args:
             if i % 2 == 0:
-                return func(*args)
+                q += 1
+                continue
             else:
-                return "Iltimos, faqat juft raqamlarni qo'shing!"
+                return "Please enter multple only even numbers!"
+        if q >= 4:
+            return dec_func(*args)
 
-    return inner
+    return little_func
 
 
-@even_parametrs
-def multiply(a, b, c, d):
+@only_even_parametrs
+def multiply(a, b, c, d, s):
     return a * b * c * d
 
 
-a = int(input("Enter the number of a ->"))
-b = int(input("Enter the number of b ->"))
-c = int(input("Enter the number of c ->"))
-d = int(input("Enter the number of d ->"))
-
-print(multiply(a, b, c, d))
+print(multiply(2, 6, 4, 8))
+print(multiply(1, 2, 2, 8))
