@@ -1,4 +1,4 @@
-def even_parametrs(func):
+def only_even_parameters(func):
     def inner(*args):
 
         for i in args:
@@ -10,7 +10,7 @@ def even_parametrs(func):
     return inner
 
 
-@even_parametrs
+@only_even_parameters
 def multiply(a, b):
     return a + b
 
