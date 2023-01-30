@@ -8,7 +8,7 @@ def func():
         yield result
 
 
-my_func = func()
+my_func = iter(func())
 
 print(next(my_func))
 print(next(my_func))
